@@ -1,2 +1,5 @@
 requests
 pydantic-settings
+starlette
+uvicorn
+loguru
