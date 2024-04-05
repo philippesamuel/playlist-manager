@@ -2,7 +2,7 @@ from contextlib import contextmanager
 from pathlib import Path
 import duckdb
 
-__all__ = ["get_db", "insert_song"]
+__all__ = ["get_db", "insert_song", "insert_spotify", "main"]
 
 sql_files = Path("sql").glob("*.sql")
 sql_statements = {p.name.replace(".sql", ""): p.read_text() for p in sql_files}
@@ -21,6 +21,12 @@ def insert_song(name: str, artists: list[str] | None = None) -> None:
     with get_db() as db:
         statement = sql_statements["insert_song"]
         db.execute(statement, [name, artists])
+
+
+def insert_spotify(song_id: int, spotify_id: str) -> None:
+    with get_db() as db:
+        statement = sql_statements["insert_spotify"]
+        db.execute(statement, [song_id, spotify_id])
 
 
 def main() -> None:

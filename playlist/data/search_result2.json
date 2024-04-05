@@ -1,0 +1,1642 @@
+{
+  "tracks": {
+    "href": "https://api.spotify.com/v1/search?query=track%3D%22Agnus+Dei%22%26artist%3D%22Michael+W.+Smith%22&type=track&market=DE&locale=en-DE%2Cen%3Bq%3D0.9%2Cpt-BR%3Bq%3D0.8%2Cpt%3Bq%3D0.7%2Cen-GB%3Bq%3D0.6%2Cen-US%3Bq%3D0.5%2Cde%3Bq%3D0.4&offset=0&limit=20",
+    "items": [
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/5aBxFPaaGk9204ssHUvXWN"
+              },
+              "href": "https://api.spotify.com/v1/artists/5aBxFPaaGk9204ssHUvXWN",
+              "id": "5aBxFPaaGk9204ssHUvXWN",
+              "name": "Michael W. Smith",
+              "type": "artist",
+              "uri": "spotify:artist:5aBxFPaaGk9204ssHUvXWN"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/4uWr8fOgmNBCP5awR10dbs"
+          },
+          "href": "https://api.spotify.com/v1/albums/4uWr8fOgmNBCP5awR10dbs",
+          "id": "4uWr8fOgmNBCP5awR10dbs",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273be6319a8373af0d97b33fe15",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02be6319a8373af0d97b33fe15",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851be6319a8373af0d97b33fe15",
+              "width": 64
+            }
+          ],
+          "is_playable": true,
+          "name": "Worship",
+          "release_date": "2001",
+          "release_date_precision": "year",
+          "total_tracks": 13,
+          "type": "album",
+          "uri": "spotify:album:4uWr8fOgmNBCP5awR10dbs"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5aBxFPaaGk9204ssHUvXWN"
+            },
+            "href": "https://api.spotify.com/v1/artists/5aBxFPaaGk9204ssHUvXWN",
+            "id": "5aBxFPaaGk9204ssHUvXWN",
+            "name": "Michael W. Smith",
+            "type": "artist",
+            "uri": "spotify:artist:5aBxFPaaGk9204ssHUvXWN"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 400800,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USRR40100041"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1qxDqbzmWODOkr0Ja5Iotz"
+        },
+        "href": "https://api.spotify.com/v1/tracks/1qxDqbzmWODOkr0Ja5Iotz",
+        "id": "1qxDqbzmWODOkr0Ja5Iotz",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Agnus Dei - Live",
+        "popularity": 49,
+        "preview_url": "https://p.scdn.co/mp3-preview/56a5ac1d3251ba1cb9eb88844034be42468e094c?cid=cfe923b2d660439caf2b557b21f31221",
+        "track_number": 9,
+        "type": "track",
+        "uri": "spotify:track:1qxDqbzmWODOkr0Ja5Iotz"
+      },
+      {
+        "album": {
+          "album_type": "compilation",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/5aBxFPaaGk9204ssHUvXWN"
+              },
+              "href": "https://api.spotify.com/v1/artists/5aBxFPaaGk9204ssHUvXWN",
+              "id": "5aBxFPaaGk9204ssHUvXWN",
+              "name": "Michael W. Smith",
+              "type": "artist",
+              "uri": "spotify:artist:5aBxFPaaGk9204ssHUvXWN"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/6svPaewhKWrqIRW3DgbrOC"
+          },
+          "href": "https://api.spotify.com/v1/albums/6svPaewhKWrqIRW3DgbrOC",
+          "id": "6svPaewhKWrqIRW3DgbrOC",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273cc87ffeec109a0e983726ad3",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02cc87ffeec109a0e983726ad3",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851cc87ffeec109a0e983726ad3",
+              "width": 64
+            }
+          ],
+          "is_playable": true,
+          "name": "Decades of Worship",
+          "release_date": "2012",
+          "release_date_precision": "year",
+          "total_tracks": 12,
+          "type": "album",
+          "uri": "spotify:album:6svPaewhKWrqIRW3DgbrOC"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5aBxFPaaGk9204ssHUvXWN"
+            },
+            "href": "https://api.spotify.com/v1/artists/5aBxFPaaGk9204ssHUvXWN",
+            "id": "5aBxFPaaGk9204ssHUvXWN",
+            "name": "Michael W. Smith",
+            "type": "artist",
+            "uri": "spotify:artist:5aBxFPaaGk9204ssHUvXWN"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 417840,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USA5W1100609"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1N9SysNAP8j4wbAIHzlM9m"
+        },
+        "href": "https://api.spotify.com/v1/tracks/1N9SysNAP8j4wbAIHzlM9m",
+        "id": "1N9SysNAP8j4wbAIHzlM9m",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Agnus Dei",
+        "popularity": 45,
+        "preview_url": "https://p.scdn.co/mp3-preview/a6c127901951debe8c2b115fba550ab5ecf17411?cid=cfe923b2d660439caf2b557b21f31221",
+        "track_number": 3,
+        "type": "track",
+        "uri": "spotify:track:1N9SysNAP8j4wbAIHzlM9m"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/5aBxFPaaGk9204ssHUvXWN"
+              },
+              "href": "https://api.spotify.com/v1/artists/5aBxFPaaGk9204ssHUvXWN",
+              "id": "5aBxFPaaGk9204ssHUvXWN",
+              "name": "Michael W. Smith",
+              "type": "artist",
+              "uri": "spotify:artist:5aBxFPaaGk9204ssHUvXWN"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/7ABTyGBo7jkcRjLwA03Kqa"
+          },
+          "href": "https://api.spotify.com/v1/albums/7ABTyGBo7jkcRjLwA03Kqa",
+          "id": "7ABTyGBo7jkcRjLwA03Kqa",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2733f06e1c0fe45bf027c1ba7f3",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e023f06e1c0fe45bf027c1ba7f3",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048513f06e1c0fe45bf027c1ba7f3",
+              "width": 64
+            }
+          ],
+          "is_playable": true,
+          "name": "Awaken: The Surrounded Experience",
+          "release_date": "2019-02-22",
+          "release_date_precision": "day",
+          "total_tracks": 13,
+          "type": "album",
+          "uri": "spotify:album:7ABTyGBo7jkcRjLwA03Kqa"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5aBxFPaaGk9204ssHUvXWN"
+            },
+            "href": "https://api.spotify.com/v1/artists/5aBxFPaaGk9204ssHUvXWN",
+            "id": "5aBxFPaaGk9204ssHUvXWN",
+            "name": "Michael W. Smith",
+            "type": "artist",
+            "uri": "spotify:artist:5aBxFPaaGk9204ssHUvXWN"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5IBA7q2IF0hOuRxdPaG65R"
+            },
+            "href": "https://api.spotify.com/v1/artists/5IBA7q2IF0hOuRxdPaG65R",
+            "id": "5IBA7q2IF0hOuRxdPaG65R",
+            "name": "Skye Reedy",
+            "type": "artist",
+            "uri": "spotify:artist:5IBA7q2IF0hOuRxdPaG65R"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 294368,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "QMF921850284"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6FnD62i17Yb1gd2RBS1x30"
+        },
+        "href": "https://api.spotify.com/v1/tracks/6FnD62i17Yb1gd2RBS1x30",
+        "id": "6FnD62i17Yb1gd2RBS1x30",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Agnus Dei",
+        "popularity": 40,
+        "preview_url": "https://p.scdn.co/mp3-preview/9c79ca85e564c7eea8000744522aa3d8d6f3aa93?cid=cfe923b2d660439caf2b557b21f31221",
+        "track_number": 12,
+        "type": "track",
+        "uri": "spotify:track:6FnD62i17Yb1gd2RBS1x30"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/5aBxFPaaGk9204ssHUvXWN"
+              },
+              "href": "https://api.spotify.com/v1/artists/5aBxFPaaGk9204ssHUvXWN",
+              "id": "5aBxFPaaGk9204ssHUvXWN",
+              "name": "Michael W. Smith",
+              "type": "artist",
+              "uri": "spotify:artist:5aBxFPaaGk9204ssHUvXWN"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/6Y0j061CrugS8XQwdyg9eP"
+          },
+          "href": "https://api.spotify.com/v1/albums/6Y0j061CrugS8XQwdyg9eP",
+          "id": "6Y0j061CrugS8XQwdyg9eP",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273b7d145a7bf1ced81aaffad62",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02b7d145a7bf1ced81aaffad62",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851b7d145a7bf1ced81aaffad62",
+              "width": 64
+            }
+          ],
+          "is_playable": true,
+          "name": "Lullaby",
+          "release_date": "2018-05-04",
+          "release_date_precision": "day",
+          "total_tracks": 27,
+          "type": "album",
+          "uri": "spotify:album:6Y0j061CrugS8XQwdyg9eP"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5aBxFPaaGk9204ssHUvXWN"
+            },
+            "href": "https://api.spotify.com/v1/artists/5aBxFPaaGk9204ssHUvXWN",
+            "id": "5aBxFPaaGk9204ssHUvXWN",
+            "name": "Michael W. Smith",
+            "type": "artist",
+            "uri": "spotify:artist:5aBxFPaaGk9204ssHUvXWN"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 206533,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "QMF921850055"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6UBSkuhGbocJjyAq3ZuULZ"
+        },
+        "href": "https://api.spotify.com/v1/tracks/6UBSkuhGbocJjyAq3ZuULZ",
+        "id": "6UBSkuhGbocJjyAq3ZuULZ",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Agnus Dei",
+        "popularity": 21,
+        "preview_url": "https://p.scdn.co/mp3-preview/68586343245031a2a66c8ec60190d795524a9ffe?cid=cfe923b2d660439caf2b557b21f31221",
+        "track_number": 15,
+        "type": "track",
+        "uri": "spotify:track:6UBSkuhGbocJjyAq3ZuULZ"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/5aBxFPaaGk9204ssHUvXWN"
+              },
+              "href": "https://api.spotify.com/v1/artists/5aBxFPaaGk9204ssHUvXWN",
+              "id": "5aBxFPaaGk9204ssHUvXWN",
+              "name": "Michael W. Smith",
+              "type": "artist",
+              "uri": "spotify:artist:5aBxFPaaGk9204ssHUvXWN"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/5WqyNqBEGw2fWmehS9vKuy"
+          },
+          "href": "https://api.spotify.com/v1/albums/5WqyNqBEGw2fWmehS9vKuy",
+          "id": "5WqyNqBEGw2fWmehS9vKuy",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273cc9004fdbd6cea5c2f619fd7",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02cc9004fdbd6cea5c2f619fd7",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851cc9004fdbd6cea5c2f619fd7",
+              "width": 64
+            }
+          ],
+          "is_playable": true,
+          "name": "Go West Young Man",
+          "release_date": "1990",
+          "release_date_precision": "year",
+          "total_tracks": 10,
+          "type": "album",
+          "uri": "spotify:album:5WqyNqBEGw2fWmehS9vKuy"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5aBxFPaaGk9204ssHUvXWN"
+            },
+            "href": "https://api.spotify.com/v1/artists/5aBxFPaaGk9204ssHUvXWN",
+            "id": "5aBxFPaaGk9204ssHUvXWN",
+            "name": "Michael W. Smith",
+            "type": "artist",
+            "uri": "spotify:artist:5aBxFPaaGk9204ssHUvXWN"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 308800,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USRR49000009"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/75epGNrtShqtqCwILdpRRp"
+        },
+        "href": "https://api.spotify.com/v1/tracks/75epGNrtShqtqCwILdpRRp",
+        "id": "75epGNrtShqtqCwILdpRRp",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Agnus Dei",
+        "popularity": 29,
+        "preview_url": "https://p.scdn.co/mp3-preview/71559e7fc205708d53b95fbc3bb58cf26814d48d?cid=cfe923b2d660439caf2b557b21f31221",
+        "track_number": 9,
+        "type": "track",
+        "uri": "spotify:track:75epGNrtShqtqCwILdpRRp"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/6piIAIurGAryW5h1rqQC16"
+              },
+              "href": "https://api.spotify.com/v1/artists/6piIAIurGAryW5h1rqQC16",
+              "id": "6piIAIurGAryW5h1rqQC16",
+              "name": "Passion",
+              "type": "artist",
+              "uri": "spotify:artist:6piIAIurGAryW5h1rqQC16"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/3HigBXr1abN9Qhirdi3WGP"
+          },
+          "href": "https://api.spotify.com/v1/albums/3HigBXr1abN9Qhirdi3WGP",
+          "id": "3HigBXr1abN9Qhirdi3WGP",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b27391b82955cb51ef411e3961a0",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e0291b82955cb51ef411e3961a0",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d0000485191b82955cb51ef411e3961a0",
+              "width": 64
+            }
+          ],
+          "is_playable": true,
+          "name": "Call on Heaven (Live)",
+          "release_date": "2024-03-01",
+          "release_date_precision": "day",
+          "total_tracks": 14,
+          "type": "album",
+          "uri": "spotify:album:3HigBXr1abN9Qhirdi3WGP"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6piIAIurGAryW5h1rqQC16"
+            },
+            "href": "https://api.spotify.com/v1/artists/6piIAIurGAryW5h1rqQC16",
+            "id": "6piIAIurGAryW5h1rqQC16",
+            "name": "Passion",
+            "type": "artist",
+            "uri": "spotify:artist:6piIAIurGAryW5h1rqQC16"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/61fqRzZ9aHyPeTdUIqEEFx"
+            },
+            "href": "https://api.spotify.com/v1/artists/61fqRzZ9aHyPeTdUIqEEFx",
+            "id": "61fqRzZ9aHyPeTdUIqEEFx",
+            "name": "Kristian Stanfill",
+            "type": "artist",
+            "uri": "spotify:artist:61fqRzZ9aHyPeTdUIqEEFx"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 1209226,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USUM72400807"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6u2N3zMvMTe2nLiG8xwkQw"
+        },
+        "href": "https://api.spotify.com/v1/tracks/6u2N3zMvMTe2nLiG8xwkQw",
+        "id": "6u2N3zMvMTe2nLiG8xwkQw",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Agnus Dei - Live From Passion 2024",
+        "popularity": 48,
+        "preview_url": null,
+        "track_number": 14,
+        "type": "track",
+        "uri": "spotify:track:6u2N3zMvMTe2nLiG8xwkQw"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/5aBxFPaaGk9204ssHUvXWN"
+              },
+              "href": "https://api.spotify.com/v1/artists/5aBxFPaaGk9204ssHUvXWN",
+              "id": "5aBxFPaaGk9204ssHUvXWN",
+              "name": "Michael W. Smith",
+              "type": "artist",
+              "uri": "spotify:artist:5aBxFPaaGk9204ssHUvXWN"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/6JS41GGpNIDVXZZpJU1YGf"
+          },
+          "href": "https://api.spotify.com/v1/albums/6JS41GGpNIDVXZZpJU1YGf",
+          "id": "6JS41GGpNIDVXZZpJU1YGf",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273ba09817091ab0b3e6f64a71e",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02ba09817091ab0b3e6f64a71e",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851ba09817091ab0b3e6f64a71e",
+              "width": 64
+            }
+          ],
+          "is_playable": true,
+          "name": "Worship Forever (Live, Extended Edition)",
+          "release_date": "2023-03-17",
+          "release_date_precision": "day",
+          "total_tracks": 28,
+          "type": "album",
+          "uri": "spotify:album:6JS41GGpNIDVXZZpJU1YGf"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5aBxFPaaGk9204ssHUvXWN"
+            },
+            "href": "https://api.spotify.com/v1/artists/5aBxFPaaGk9204ssHUvXWN",
+            "id": "5aBxFPaaGk9204ssHUvXWN",
+            "name": "Michael W. Smith",
+            "type": "artist",
+            "uri": "spotify:artist:5aBxFPaaGk9204ssHUvXWN"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/72Nhcx7prNk2ZCxhx0Y5es"
+            },
+            "href": "https://api.spotify.com/v1/artists/72Nhcx7prNk2ZCxhx0Y5es",
+            "id": "72Nhcx7prNk2ZCxhx0Y5es",
+            "name": "Amy Grant",
+            "type": "artist",
+            "uri": "spotify:artist:72Nhcx7prNk2ZCxhx0Y5es"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 329680,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "QMF922150109"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1ipQpRlDxZbjMd95MDdcTc"
+        },
+        "href": "https://api.spotify.com/v1/tracks/1ipQpRlDxZbjMd95MDdcTc",
+        "id": "1ipQpRlDxZbjMd95MDdcTc",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Agnus Dei - Live",
+        "popularity": 24,
+        "preview_url": "https://p.scdn.co/mp3-preview/f3d051daf46f73e7b311f4e1f4657620880a2a29?cid=cfe923b2d660439caf2b557b21f31221",
+        "track_number": 9,
+        "type": "track",
+        "uri": "spotify:track:1ipQpRlDxZbjMd95MDdcTc"
+      },
+      {
+        "album": {
+          "album_type": "single",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/3SgHzT552wy2W8pNLaLk24"
+              },
+              "href": "https://api.spotify.com/v1/artists/3SgHzT552wy2W8pNLaLk24",
+              "id": "3SgHzT552wy2W8pNLaLk24",
+              "name": "Hillsong Worship",
+              "type": "artist",
+              "uri": "spotify:artist:3SgHzT552wy2W8pNLaLk24"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/5RqbrQhdemPBZRt0Nv14Fx"
+          },
+          "href": "https://api.spotify.com/v1/albums/5RqbrQhdemPBZRt0Nv14Fx",
+          "id": "5RqbrQhdemPBZRt0Nv14Fx",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273cd07f2be5ed39000753bf8e7",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02cd07f2be5ed39000753bf8e7",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851cd07f2be5ed39000753bf8e7",
+              "width": 64
+            }
+          ],
+          "is_playable": true,
+          "name": "At Easter",
+          "release_date": "2021-03-05",
+          "release_date_precision": "day",
+          "total_tracks": 5,
+          "type": "album",
+          "uri": "spotify:album:5RqbrQhdemPBZRt0Nv14Fx"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/3SgHzT552wy2W8pNLaLk24"
+            },
+            "href": "https://api.spotify.com/v1/artists/3SgHzT552wy2W8pNLaLk24",
+            "id": "3SgHzT552wy2W8pNLaLk24",
+            "name": "Hillsong Worship",
+            "type": "artist",
+            "uri": "spotify:artist:3SgHzT552wy2W8pNLaLk24"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6piIAIurGAryW5h1rqQC16"
+            },
+            "href": "https://api.spotify.com/v1/artists/6piIAIurGAryW5h1rqQC16",
+            "id": "6piIAIurGAryW5h1rqQC16",
+            "name": "Passion",
+            "type": "artist",
+            "uri": "spotify:artist:6piIAIurGAryW5h1rqQC16"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6zlQA1XhUAeqMSs1hkSi9a"
+            },
+            "href": "https://api.spotify.com/v1/artists/6zlQA1XhUAeqMSs1hkSi9a",
+            "id": "6zlQA1XhUAeqMSs1hkSi9a",
+            "name": "Chidima",
+            "type": "artist",
+            "uri": "spotify:artist:6zlQA1XhUAeqMSs1hkSi9a"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0cuW2lF0YWb9VUyHOnvnsO"
+            },
+            "href": "https://api.spotify.com/v1/artists/0cuW2lF0YWb9VUyHOnvnsO",
+            "id": "0cuW2lF0YWb9VUyHOnvnsO",
+            "name": "Jenn Johnson",
+            "type": "artist",
+            "uri": "spotify:artist:0cuW2lF0YWb9VUyHOnvnsO"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/7iETGaxJ4crz3qaljDPCKC"
+            },
+            "href": "https://api.spotify.com/v1/artists/7iETGaxJ4crz3qaljDPCKC",
+            "id": "7iETGaxJ4crz3qaljDPCKC",
+            "name": "Brooke Ligertwood",
+            "type": "artist",
+            "uri": "spotify:artist:7iETGaxJ4crz3qaljDPCKC"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 402973,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "AUHS02014011"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2GwhmLK4T0l15MRxy56PCu"
+        },
+        "href": "https://api.spotify.com/v1/tracks/2GwhmLK4T0l15MRxy56PCu",
+        "id": "2GwhmLK4T0l15MRxy56PCu",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Agnus Dei / King of Kings",
+        "popularity": 47,
+        "preview_url": "https://p.scdn.co/mp3-preview/4d82291495e1228720d5908646c7ad9f5b3da0c2?cid=cfe923b2d660439caf2b557b21f31221",
+        "track_number": 4,
+        "type": "track",
+        "uri": "spotify:track:2GwhmLK4T0l15MRxy56PCu"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/5aBxFPaaGk9204ssHUvXWN"
+              },
+              "href": "https://api.spotify.com/v1/artists/5aBxFPaaGk9204ssHUvXWN",
+              "id": "5aBxFPaaGk9204ssHUvXWN",
+              "name": "Michael W. Smith",
+              "type": "artist",
+              "uri": "spotify:artist:5aBxFPaaGk9204ssHUvXWN"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/3mghvRsS1rO0xDr8DSkG3N"
+          },
+          "href": "https://api.spotify.com/v1/albums/3mghvRsS1rO0xDr8DSkG3N",
+          "id": "3mghvRsS1rO0xDr8DSkG3N",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2738009d8478b494d667525a732",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e028009d8478b494d667525a732",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048518009d8478b494d667525a732",
+              "width": 64
+            }
+          ],
+          "is_playable": true,
+          "name": "Awaken: The Surrounded Experience (Live)",
+          "release_date": "2019-02-22",
+          "release_date_precision": "day",
+          "total_tracks": 13,
+          "type": "album",
+          "uri": "spotify:album:3mghvRsS1rO0xDr8DSkG3N"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5aBxFPaaGk9204ssHUvXWN"
+            },
+            "href": "https://api.spotify.com/v1/artists/5aBxFPaaGk9204ssHUvXWN",
+            "id": "5aBxFPaaGk9204ssHUvXWN",
+            "name": "Michael W. Smith",
+            "type": "artist",
+            "uri": "spotify:artist:5aBxFPaaGk9204ssHUvXWN"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5IBA7q2IF0hOuRxdPaG65R"
+            },
+            "href": "https://api.spotify.com/v1/artists/5IBA7q2IF0hOuRxdPaG65R",
+            "id": "5IBA7q2IF0hOuRxdPaG65R",
+            "name": "Skye Reedy",
+            "type": "artist",
+            "uri": "spotify:artist:5IBA7q2IF0hOuRxdPaG65R"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 294368,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "QMF921850284"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4PlxtUiHOrg5ZwEp0aJSuh"
+        },
+        "href": "https://api.spotify.com/v1/tracks/4PlxtUiHOrg5ZwEp0aJSuh",
+        "id": "4PlxtUiHOrg5ZwEp0aJSuh",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Agnus Dei - Live",
+        "popularity": 15,
+        "preview_url": "https://p.scdn.co/mp3-preview/51f614efb133371617e5d3b05951b1bc6c46b3b9?cid=cfe923b2d660439caf2b557b21f31221",
+        "track_number": 12,
+        "type": "track",
+        "uri": "spotify:track:4PlxtUiHOrg5ZwEp0aJSuh"
+      },
+      {
+        "album": {
+          "album_type": "compilation",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/0LyfQWJT6nXafLPZqxe9Of"
+              },
+              "href": "https://api.spotify.com/v1/artists/0LyfQWJT6nXafLPZqxe9Of",
+              "id": "0LyfQWJT6nXafLPZqxe9Of",
+              "name": "Various Artists",
+              "type": "artist",
+              "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/3KZfGB20r3wRn3esyT8fpJ"
+          },
+          "href": "https://api.spotify.com/v1/albums/3KZfGB20r3wRn3esyT8fpJ",
+          "id": "3KZfGB20r3wRn3esyT8fpJ",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2734052eccd6c75c4c9cbde4c5c",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e024052eccd6c75c4c9cbde4c5c",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048514052eccd6c75c4c9cbde4c5c",
+              "width": 64
+            }
+          ],
+          "is_playable": true,
+          "name": "Our God Of Wonders, Vol. 1",
+          "release_date": "2001-08-01",
+          "release_date_precision": "day",
+          "total_tracks": 12,
+          "type": "album",
+          "uri": "spotify:album:3KZfGB20r3wRn3esyT8fpJ"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5aBxFPaaGk9204ssHUvXWN"
+            },
+            "href": "https://api.spotify.com/v1/artists/5aBxFPaaGk9204ssHUvXWN",
+            "id": "5aBxFPaaGk9204ssHUvXWN",
+            "name": "Michael W. Smith",
+            "type": "artist",
+            "uri": "spotify:artist:5aBxFPaaGk9204ssHUvXWN"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 400800,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USRR40100041"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/413WwV7PwLEzImYBCRqk6t"
+        },
+        "href": "https://api.spotify.com/v1/tracks/413WwV7PwLEzImYBCRqk6t",
+        "id": "413WwV7PwLEzImYBCRqk6t",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Agnus Dei - Live",
+        "popularity": 17,
+        "preview_url": "https://p.scdn.co/mp3-preview/3a7d1af123ce1f85fdb25654bc4d4141ec9526e6?cid=cfe923b2d660439caf2b557b21f31221",
+        "track_number": 7,
+        "type": "track",
+        "uri": "spotify:track:413WwV7PwLEzImYBCRqk6t"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/5aBxFPaaGk9204ssHUvXWN"
+              },
+              "href": "https://api.spotify.com/v1/artists/5aBxFPaaGk9204ssHUvXWN",
+              "id": "5aBxFPaaGk9204ssHUvXWN",
+              "name": "Michael W. Smith",
+              "type": "artist",
+              "uri": "spotify:artist:5aBxFPaaGk9204ssHUvXWN"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/5g3F0D8PMNzxrdrNnKWbwY"
+          },
+          "href": "https://api.spotify.com/v1/albums/5g3F0D8PMNzxrdrNnKWbwY",
+          "id": "5g3F0D8PMNzxrdrNnKWbwY",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273bd01a1f59a72ee5984d56acc",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02bd01a1f59a72ee5984d56acc",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851bd01a1f59a72ee5984d56acc",
+              "width": 64
+            }
+          ],
+          "is_playable": true,
+          "name": "Glory",
+          "release_date": "2011-11-21",
+          "release_date_precision": "day",
+          "total_tracks": 12,
+          "type": "album",
+          "uri": "spotify:album:5g3F0D8PMNzxrdrNnKWbwY"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5aBxFPaaGk9204ssHUvXWN"
+            },
+            "href": "https://api.spotify.com/v1/artists/5aBxFPaaGk9204ssHUvXWN",
+            "id": "5aBxFPaaGk9204ssHUvXWN",
+            "name": "Michael W. Smith",
+            "type": "artist",
+            "uri": "spotify:artist:5aBxFPaaGk9204ssHUvXWN"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 411640,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "US9F21100038"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3iyJqJuRE1QlQbkgEV9sWS"
+        },
+        "href": "https://api.spotify.com/v1/tracks/3iyJqJuRE1QlQbkgEV9sWS",
+        "id": "3iyJqJuRE1QlQbkgEV9sWS",
+        "is_local": false,
+        "is_playable": true,
+        "name": "The Tribute / Agnus Dei",
+        "popularity": 32,
+        "preview_url": "https://p.scdn.co/mp3-preview/d91a020fb827b9ac5ccc45db33c9e42c562ad659?cid=cfe923b2d660439caf2b557b21f31221",
+        "track_number": 12,
+        "type": "track",
+        "uri": "spotify:track:3iyJqJuRE1QlQbkgEV9sWS"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/5aBxFPaaGk9204ssHUvXWN"
+              },
+              "href": "https://api.spotify.com/v1/artists/5aBxFPaaGk9204ssHUvXWN",
+              "id": "5aBxFPaaGk9204ssHUvXWN",
+              "name": "Michael W. Smith",
+              "type": "artist",
+              "uri": "spotify:artist:5aBxFPaaGk9204ssHUvXWN"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/6JS41GGpNIDVXZZpJU1YGf"
+          },
+          "href": "https://api.spotify.com/v1/albums/6JS41GGpNIDVXZZpJU1YGf",
+          "id": "6JS41GGpNIDVXZZpJU1YGf",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273ba09817091ab0b3e6f64a71e",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02ba09817091ab0b3e6f64a71e",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851ba09817091ab0b3e6f64a71e",
+              "width": 64
+            }
+          ],
+          "is_playable": true,
+          "name": "Worship Forever (Live, Extended Edition)",
+          "release_date": "2023-03-17",
+          "release_date_precision": "day",
+          "total_tracks": 28,
+          "type": "album",
+          "uri": "spotify:album:6JS41GGpNIDVXZZpJU1YGf"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5aBxFPaaGk9204ssHUvXWN"
+            },
+            "href": "https://api.spotify.com/v1/artists/5aBxFPaaGk9204ssHUvXWN",
+            "id": "5aBxFPaaGk9204ssHUvXWN",
+            "name": "Michael W. Smith",
+            "type": "artist",
+            "uri": "spotify:artist:5aBxFPaaGk9204ssHUvXWN"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 321053,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "QMF922350047"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4KNYoD13f3o5p3SRkR7FTr"
+        },
+        "href": "https://api.spotify.com/v1/tracks/4KNYoD13f3o5p3SRkR7FTr",
+        "id": "4KNYoD13f3o5p3SRkR7FTr",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Agnus Dei - Instrumental",
+        "popularity": 23,
+        "preview_url": "https://p.scdn.co/mp3-preview/4b3d4e0cf5c9e6f8c57cc56c3abfddf528d273b7?cid=cfe923b2d660439caf2b557b21f31221",
+        "track_number": 24,
+        "type": "track",
+        "uri": "spotify:track:4KNYoD13f3o5p3SRkR7FTr"
+      },
+      {
+        "album": {
+          "album_type": "single",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/5aBxFPaaGk9204ssHUvXWN"
+              },
+              "href": "https://api.spotify.com/v1/artists/5aBxFPaaGk9204ssHUvXWN",
+              "id": "5aBxFPaaGk9204ssHUvXWN",
+              "name": "Michael W. Smith",
+              "type": "artist",
+              "uri": "spotify:artist:5aBxFPaaGk9204ssHUvXWN"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/6rAbB8RMxupIRZXUIs8sOs"
+          },
+          "href": "https://api.spotify.com/v1/albums/6rAbB8RMxupIRZXUIs8sOs",
+          "id": "6rAbB8RMxupIRZXUIs8sOs",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273b2d0832d2fd2a2977516b5f5",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02b2d0832d2fd2a2977516b5f5",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851b2d0832d2fd2a2977516b5f5",
+              "width": 64
+            }
+          ],
+          "is_playable": true,
+          "name": "Worthy is the Lamb (Live)",
+          "release_date": "2024-03-15",
+          "release_date_precision": "day",
+          "total_tracks": 5,
+          "type": "album",
+          "uri": "spotify:album:6rAbB8RMxupIRZXUIs8sOs"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5aBxFPaaGk9204ssHUvXWN"
+            },
+            "href": "https://api.spotify.com/v1/artists/5aBxFPaaGk9204ssHUvXWN",
+            "id": "5aBxFPaaGk9204ssHUvXWN",
+            "name": "Michael W. Smith",
+            "type": "artist",
+            "uri": "spotify:artist:5aBxFPaaGk9204ssHUvXWN"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 238431,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "QMF922350307"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5UrQsuWJEnTA8pXkLQG0p6"
+        },
+        "href": "https://api.spotify.com/v1/tracks/5UrQsuWJEnTA8pXkLQG0p6",
+        "id": "5UrQsuWJEnTA8pXkLQG0p6",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Agnus Dei - Live",
+        "popularity": 37,
+        "preview_url": "https://p.scdn.co/mp3-preview/eaf0c114fa472ba4b9998dd9f32a9eab743e77b9?cid=cfe923b2d660439caf2b557b21f31221",
+        "track_number": 4,
+        "type": "track",
+        "uri": "spotify:track:5UrQsuWJEnTA8pXkLQG0p6"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2fizYQ6PTbXb0JFOiDZJ63"
+              },
+              "href": "https://api.spotify.com/v1/artists/2fizYQ6PTbXb0JFOiDZJ63",
+              "id": "2fizYQ6PTbXb0JFOiDZJ63",
+              "name": "Judson Mancebo",
+              "type": "artist",
+              "uri": "spotify:artist:2fizYQ6PTbXb0JFOiDZJ63"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/6XLMdv6ND2suUfmqYGAiPB"
+          },
+          "href": "https://api.spotify.com/v1/albums/6XLMdv6ND2suUfmqYGAiPB",
+          "id": "6XLMdv6ND2suUfmqYGAiPB",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2735ae29d1c6a827c5fc99e5637",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e025ae29d1c6a827c5fc99e5637",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048515ae29d1c6a827c5fc99e5637",
+              "width": 64
+            }
+          ],
+          "is_playable": true,
+          "name": "Just for Babies: Lullaby Renditions of Michael W Smith",
+          "release_date": "2015-04-29",
+          "release_date_precision": "day",
+          "total_tracks": 10,
+          "type": "album",
+          "uri": "spotify:album:6XLMdv6ND2suUfmqYGAiPB"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2fizYQ6PTbXb0JFOiDZJ63"
+            },
+            "href": "https://api.spotify.com/v1/artists/2fizYQ6PTbXb0JFOiDZJ63",
+            "id": "2fizYQ6PTbXb0JFOiDZJ63",
+            "name": "Judson Mancebo",
+            "type": "artist",
+            "uri": "spotify:artist:2fizYQ6PTbXb0JFOiDZJ63"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 248302,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "BRITK0900011"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1kFefnQCfTNHO6Ugc16Xbp"
+        },
+        "href": "https://api.spotify.com/v1/tracks/1kFefnQCfTNHO6Ugc16Xbp",
+        "id": "1kFefnQCfTNHO6Ugc16Xbp",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Agnus Dei",
+        "popularity": 22,
+        "preview_url": "https://p.scdn.co/mp3-preview/4a854a1241a5582d838318309741ad0ffb71e216?cid=cfe923b2d660439caf2b557b21f31221",
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:1kFefnQCfTNHO6Ugc16Xbp"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/32nW8kGbs65y8CSlIvREuc"
+              },
+              "href": "https://api.spotify.com/v1/artists/32nW8kGbs65y8CSlIvREuc",
+              "id": "32nW8kGbs65y8CSlIvREuc",
+              "name": "VOCES8",
+              "type": "artist",
+              "uri": "spotify:artist:32nW8kGbs65y8CSlIvREuc"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/6oXgXpm6UC0kveOf8A8qrL"
+          },
+          "href": "https://api.spotify.com/v1/albums/6oXgXpm6UC0kveOf8A8qrL",
+          "id": "6oXgXpm6UC0kveOf8A8qrL",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273dbea671246701eb94aface05",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02dbea671246701eb94aface05",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851dbea671246701eb94aface05",
+              "width": 64
+            }
+          ],
+          "is_playable": true,
+          "name": "Enchanted Isle",
+          "release_date": "2019-01-18",
+          "release_date_precision": "day",
+          "total_tracks": 17,
+          "type": "album",
+          "uri": "spotify:album:6oXgXpm6UC0kveOf8A8qrL"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4XDJurjQCnWLlE7KLZCT9x"
+            },
+            "href": "https://api.spotify.com/v1/artists/4XDJurjQCnWLlE7KLZCT9x",
+            "id": "4XDJurjQCnWLlE7KLZCT9x",
+            "name": "Samuel Barber",
+            "type": "artist",
+            "uri": "spotify:artist:4XDJurjQCnWLlE7KLZCT9x"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/32nW8kGbs65y8CSlIvREuc"
+            },
+            "href": "https://api.spotify.com/v1/artists/32nW8kGbs65y8CSlIvREuc",
+            "id": "32nW8kGbs65y8CSlIvREuc",
+            "name": "VOCES8",
+            "type": "artist",
+            "uri": "spotify:artist:32nW8kGbs65y8CSlIvREuc"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 461653,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "GBBBA1800603"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/02vw0tjLamMJAzMlCSiNH3"
+        },
+        "href": "https://api.spotify.com/v1/tracks/02vw0tjLamMJAzMlCSiNH3",
+        "id": "02vw0tjLamMJAzMlCSiNH3",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Agnus Dei",
+        "popularity": 46,
+        "preview_url": null,
+        "track_number": 5,
+        "type": "track",
+        "uri": "spotify:track:02vw0tjLamMJAzMlCSiNH3"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/4gbpMKlkQNNwfrvTQRs4GA"
+              },
+              "href": "https://api.spotify.com/v1/artists/4gbpMKlkQNNwfrvTQRs4GA",
+              "id": "4gbpMKlkQNNwfrvTQRs4GA",
+              "name": "Christian Music For Babies",
+              "type": "artist",
+              "uri": "spotify:artist:4gbpMKlkQNNwfrvTQRs4GA"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/6MFHkbxe4UAKkNSGd2TBdF"
+          },
+          "href": "https://api.spotify.com/v1/albums/6MFHkbxe4UAKkNSGd2TBdF",
+          "id": "6MFHkbxe4UAKkNSGd2TBdF",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b27300fc59c93152a667cd51c13c",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e0200fc59c93152a667cd51c13c",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d0000485100fc59c93152a667cd51c13c",
+              "width": 64
+            }
+          ],
+          "is_playable": true,
+          "name": "Lullaby Versions of Michael W Smith",
+          "release_date": "2016-04-12",
+          "release_date_precision": "day",
+          "total_tracks": 10,
+          "type": "album",
+          "uri": "spotify:album:6MFHkbxe4UAKkNSGd2TBdF"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4gbpMKlkQNNwfrvTQRs4GA"
+            },
+            "href": "https://api.spotify.com/v1/artists/4gbpMKlkQNNwfrvTQRs4GA",
+            "id": "4gbpMKlkQNNwfrvTQRs4GA",
+            "name": "Christian Music For Babies",
+            "type": "artist",
+            "uri": "spotify:artist:4gbpMKlkQNNwfrvTQRs4GA"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 234361,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "BRITK1600332"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4GzOUBikGy5n9UVngVy2O5"
+        },
+        "href": "https://api.spotify.com/v1/tracks/4GzOUBikGy5n9UVngVy2O5",
+        "id": "4GzOUBikGy5n9UVngVy2O5",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Agnus Dei - Lullaby Version",
+        "popularity": 37,
+        "preview_url": "https://p.scdn.co/mp3-preview/cde96ba656697fec623e0898e192e084ad4c2a70?cid=cfe923b2d660439caf2b557b21f31221",
+        "track_number": 2,
+        "type": "track",
+        "uri": "spotify:track:4GzOUBikGy5n9UVngVy2O5"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2ZFt5uig4HznTmT77DuVuk"
+              },
+              "href": "https://api.spotify.com/v1/artists/2ZFt5uig4HznTmT77DuVuk",
+              "id": "2ZFt5uig4HznTmT77DuVuk",
+              "name": "Música Cristiana Para Niños de TraxLab",
+              "type": "artist",
+              "uri": "spotify:artist:2ZFt5uig4HznTmT77DuVuk"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/3wXAcCvxISWhf19AUFkICy"
+          },
+          "href": "https://api.spotify.com/v1/albums/3wXAcCvxISWhf19AUFkICy",
+          "id": "3wXAcCvxISWhf19AUFkICy",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273ee258ea9c5e73af93fa31985",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02ee258ea9c5e73af93fa31985",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851ee258ea9c5e73af93fa31985",
+              "width": 64
+            }
+          ],
+          "is_playable": true,
+          "name": "Música Cristiana Para Bebés: Michael W. Smith",
+          "release_date": "2016-10-24",
+          "release_date_precision": "day",
+          "total_tracks": 10,
+          "type": "album",
+          "uri": "spotify:album:3wXAcCvxISWhf19AUFkICy"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2ZFt5uig4HznTmT77DuVuk"
+            },
+            "href": "https://api.spotify.com/v1/artists/2ZFt5uig4HznTmT77DuVuk",
+            "id": "2ZFt5uig4HznTmT77DuVuk",
+            "name": "Música Cristiana Para Niños de TraxLab",
+            "type": "artist",
+            "uri": "spotify:artist:2ZFt5uig4HznTmT77DuVuk"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 230164,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "BRITK1601131"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7cnv1rPFjOPrH01lQ5xQ9X"
+        },
+        "href": "https://api.spotify.com/v1/tracks/7cnv1rPFjOPrH01lQ5xQ9X",
+        "id": "7cnv1rPFjOPrH01lQ5xQ9X",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Agnus Dei",
+        "popularity": 28,
+        "preview_url": "https://p.scdn.co/mp3-preview/898b2913ab2c99f28beaebeffa391ff23d76ba58?cid=cfe923b2d660439caf2b557b21f31221",
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:7cnv1rPFjOPrH01lQ5xQ9X"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2hWqRifOFNpSRKhygf6EbK"
+              },
+              "href": "https://api.spotify.com/v1/artists/2hWqRifOFNpSRKhygf6EbK",
+              "id": "2hWqRifOFNpSRKhygf6EbK",
+              "name": "Praise and Worship Orchestra",
+              "type": "artist",
+              "uri": "spotify:artist:2hWqRifOFNpSRKhygf6EbK"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/0ZE5pvtCKCjUKtDUqgeCjz"
+          },
+          "href": "https://api.spotify.com/v1/albums/0ZE5pvtCKCjUKtDUqgeCjz",
+          "id": "0ZE5pvtCKCjUKtDUqgeCjz",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273c5160b6a7057b7b84113ce8e",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02c5160b6a7057b7b84113ce8e",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851c5160b6a7057b7b84113ce8e",
+              "width": 64
+            }
+          ],
+          "is_playable": true,
+          "name": "Worship Songs for Quiet Moments, Vol. 1",
+          "release_date": "2016-10-05",
+          "release_date_precision": "day",
+          "total_tracks": 10,
+          "type": "album",
+          "uri": "spotify:album:0ZE5pvtCKCjUKtDUqgeCjz"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2hWqRifOFNpSRKhygf6EbK"
+            },
+            "href": "https://api.spotify.com/v1/artists/2hWqRifOFNpSRKhygf6EbK",
+            "id": "2hWqRifOFNpSRKhygf6EbK",
+            "name": "Praise and Worship Orchestra",
+            "type": "artist",
+            "uri": "spotify:artist:2hWqRifOFNpSRKhygf6EbK"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 244181,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "BRITK1601172"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1X1R1xJgQsz32wT9D4jBFR"
+        },
+        "href": "https://api.spotify.com/v1/tracks/1X1R1xJgQsz32wT9D4jBFR",
+        "id": "1X1R1xJgQsz32wT9D4jBFR",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Agnus Dei - Piano and Orchestra Version",
+        "popularity": 46,
+        "preview_url": "https://p.scdn.co/mp3-preview/f9ea338b5d68d02df38de9205a2d32b49d40f851?cid=cfe923b2d660439caf2b557b21f31221",
+        "track_number": 2,
+        "type": "track",
+        "uri": "spotify:track:1X1R1xJgQsz32wT9D4jBFR"
+      },
+      {
+        "album": {
+          "album_type": "single",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/0sZthdvnywFnxHz1x0k6Ov"
+              },
+              "href": "https://api.spotify.com/v1/artists/0sZthdvnywFnxHz1x0k6Ov",
+              "id": "0sZthdvnywFnxHz1x0k6Ov",
+              "name": "Probandi Benedittini Di San Giovanni In Parma",
+              "type": "artist",
+              "uri": "spotify:artist:0sZthdvnywFnxHz1x0k6Ov"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/4TIlUWegHvw4D2Qq2OJtLB"
+          },
+          "href": "https://api.spotify.com/v1/albums/4TIlUWegHvw4D2Qq2OJtLB",
+          "id": "4TIlUWegHvw4D2Qq2OJtLB",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2733c3bd1d1cdcb081ef78c19c2",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e023c3bd1d1cdcb081ef78c19c2",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048513c3bd1d1cdcb081ef78c19c2",
+              "width": 64
+            }
+          ],
+          "is_playable": true,
+          "name": "Missa Lux Et Origo",
+          "release_date": "2010-04-26",
+          "release_date_precision": "day",
+          "total_tracks": 6,
+          "type": "album",
+          "uri": "spotify:album:4TIlUWegHvw4D2Qq2OJtLB"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0sZthdvnywFnxHz1x0k6Ov"
+            },
+            "href": "https://api.spotify.com/v1/artists/0sZthdvnywFnxHz1x0k6Ov",
+            "id": "0sZthdvnywFnxHz1x0k6Ov",
+            "name": "Probandi Benedittini Di San Giovanni In Parma",
+            "type": "artist",
+            "uri": "spotify:artist:0sZthdvnywFnxHz1x0k6Ov"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 93988,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "ITS615916605"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5O0NtYqrJy8hetnjE5bMQD"
+        },
+        "href": "https://api.spotify.com/v1/tracks/5O0NtYqrJy8hetnjE5bMQD",
+        "id": "5O0NtYqrJy8hetnjE5bMQD",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Agnus Dei",
+        "popularity": 42,
+        "preview_url": "https://p.scdn.co/mp3-preview/a1a3fbe735ca8836cba1a0edb015de15c6d2f861?cid=cfe923b2d660439caf2b557b21f31221",
+        "track_number": 5,
+        "type": "track",
+        "uri": "spotify:track:5O0NtYqrJy8hetnjE5bMQD"
+      },
+      {
+        "album": {
+          "album_type": "single",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/0sZthdvnywFnxHz1x0k6Ov"
+              },
+              "href": "https://api.spotify.com/v1/artists/0sZthdvnywFnxHz1x0k6Ov",
+              "id": "0sZthdvnywFnxHz1x0k6Ov",
+              "name": "Probandi Benedittini Di San Giovanni In Parma",
+              "type": "artist",
+              "uri": "spotify:artist:0sZthdvnywFnxHz1x0k6Ov"
+            }
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/32aNbSDLaDqdEkxOMyE57i"
+          },
+          "href": "https://api.spotify.com/v1/albums/32aNbSDLaDqdEkxOMyE57i",
+          "id": "32aNbSDLaDqdEkxOMyE57i",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b27366a31597f397b14b6f5fc651",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e0266a31597f397b14b6f5fc651",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d0000485166a31597f397b14b6f5fc651",
+              "width": 64
+            }
+          ],
+          "is_playable": true,
+          "name": "Missa De Angelis",
+          "release_date": "2010-04-26",
+          "release_date_precision": "day",
+          "total_tracks": 6,
+          "type": "album",
+          "uri": "spotify:album:32aNbSDLaDqdEkxOMyE57i"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0sZthdvnywFnxHz1x0k6Ov"
+            },
+            "href": "https://api.spotify.com/v1/artists/0sZthdvnywFnxHz1x0k6Ov",
+            "id": "0sZthdvnywFnxHz1x0k6Ov",
+            "name": "Probandi Benedittini Di San Giovanni In Parma",
+            "type": "artist",
+            "uri": "spotify:artist:0sZthdvnywFnxHz1x0k6Ov"
+          }
+        ],
+        "disc_number": 1,
+        "duration_ms": 90070,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "ITS615916505"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6ZelDOwkzWp8kyGBuch9YD"
+        },
+        "href": "https://api.spotify.com/v1/tracks/6ZelDOwkzWp8kyGBuch9YD",
+        "id": "6ZelDOwkzWp8kyGBuch9YD",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Agnus Dei",
+        "popularity": 45,
+        "preview_url": "https://p.scdn.co/mp3-preview/c830901eecd1dcd07a161a7cccef0f8990b3612e?cid=cfe923b2d660439caf2b557b21f31221",
+        "track_number": 5,
+        "type": "track",
+        "uri": "spotify:track:6ZelDOwkzWp8kyGBuch9YD"
+      }
+    ],
+    "limit": 20,
+    "next": "https://api.spotify.com/v1/search?query=track%3D%22Agnus+Dei%22%26artist%3D%22Michael+W.+Smith%22&type=track&market=DE&locale=en-DE%2Cen%3Bq%3D0.9%2Cpt-BR%3Bq%3D0.8%2Cpt%3Bq%3D0.7%2Cen-GB%3Bq%3D0.6%2Cen-US%3Bq%3D0.5%2Cde%3Bq%3D0.4&offset=20&limit=20",
+    "offset": 0,
+    "previous": null,
+    "total": 800
+  }
+}
