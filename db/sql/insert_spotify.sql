@@ -1,0 +1,1 @@
+INSERT INTO spotify (id, name, artists) VALUES (nextval('seq_songid'), ?, ?);

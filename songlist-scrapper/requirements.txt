@@ -1,0 +1,9 @@
+httpx
+ipython
+cachier
+selenium
+pydantic-settings
+duckdb
+jupysql
+magic_duckdb
+loguru
