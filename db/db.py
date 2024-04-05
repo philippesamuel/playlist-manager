@@ -2,6 +2,8 @@ from contextlib import contextmanager
 from pathlib import Path
 import duckdb
 
+__all__ = ["get_db", "insert_song"]
+
 sql_files = Path("sql").glob("*.sql")
 sql_statements = {p.name.replace(".sql", ""): p.read_text() for p in sql_files}
 
