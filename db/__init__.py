@@ -1,1 +1,1 @@
-from db import get_db, insert_song, insert_spotify, main
+from .db import get_db, insert_song, insert_spotify, main

@@ -9,8 +9,8 @@ sql_statements = {p.name.replace(".sql", ""): p.read_text() for p in sql_files}
 
 
 @contextmanager
-def get_db():
-    con = duckdb.connect(database="duck.db", read_only=False)
+def get_db(read_only: bool = False):
+    con = duckdb.connect(database="db/duck.db", read_only=read_only)
     try:
         yield con
     finally:
