@@ -1,1 +1,0 @@
-INSERT INTO song (id, name, artists) VALUES (nextval('seq_songid'), ?, ?);
