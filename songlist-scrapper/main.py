@@ -1,18 +1,18 @@
 from loguru import logger
 
 from churchtools import get_browser, login_and_yield_song_data
-from db import get_db, insert_song
+from db import insert_song, update_song
 
 
 def main() -> None:
     browser = get_browser()
-    with get_db() as db:
-        for song_name, song_artists in login_and_yield_song_data(browser):
-            q = db.execute("SELECT name FROM songs WHERE name = ?", [song_name])
-            if q.fetchone():
-                logger.info(f"Song '{song_name}' already exists in the database")
-                continue
-            insert_song(song_name, song_artists)
+    for song_name, song_artists, ccli_number in login_and_yield_song_data(browser):
+        if song_artists:
+            split = map(str.split, song_artists)
+            split = (names for names in split if len(names) >= 2)
+            song_artists_clean = [(first_name, last_name) for first_name, *_, last_name in split]
+        # insert_song(song_name, song_artists_clean, ccli_number)
+        update_song(song_name, song_artists_clean, ccli_number)
 
 
 if __name__ == "__main__":
