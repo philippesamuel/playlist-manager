@@ -180,7 +180,9 @@ def read_root():
 
 
 @app.get("/songs/{song_id}", response_model=SongModel)
-def read_song(song_id: int, token: Annotated[str, Depends(oauth2_scheme)]) -> SongModel:
+def read_song(
+    song_id: int, current_user: Annotated[User, Depends(get_current_active_user)]
+    ) -> SongModel:
     song = get_song_by_id(song_id)
     if song is None:
         raise HTTPException(status_code=404, detail="Song not found")
@@ -188,7 +190,9 @@ def read_song(song_id: int, token: Annotated[str, Depends(oauth2_scheme)]) -> So
 
 
 @app.get("/artists/{artist_id}", response_model=ArtistModel)
-def read_artist(artist_id: int) -> ArtistModel:
+def read_artist(
+    artist_id: int, current_user: Annotated[User, Depends(get_current_active_user)]
+    ) -> ArtistModel:
     artist = get_artist_by_id(artist_id)
     if artist is None:
         raise HTTPException(status_code=404, detail="Artist not found")
@@ -196,14 +200,18 @@ def read_artist(artist_id: int) -> ArtistModel:
 
 
 @app.get("/songs/")
-def read_songs(search: str = None) -> list[SongModel]:
+def read_songs(
+    search: str = None, current_user: Annotated[User, Depends(get_current_active_user)] = None
+    ) -> list[SongModel]:
     if search:
         return search_songs(search)
     return get_all_songs()
 
 
 @app.get("/artists/")
-def read_artists(search: str = None) -> list[ArtistModel]:
+def read_artists(
+    search: str = None, current_user: Annotated[User, Depends(get_current_active_user)] = None
+    ) -> list[ArtistModel]:
     if search:
         return search_artists(search)
     return get_all_artists()
