@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Spotify Playlist</title>
+</head>
+
+<body>
+    <div id="app">
+        <!-- Display the songs -->
+        <div>
+            <h1>Songs</h1>
+            <ul v-for="song in songs" :key="song.id" id="song-list">
+                <a href="#" @click="selectedSongID = song.id">{{ song.name }}</a>
+            </ul>
+        </div>
+        <div>
+            <h1>Details for selected song</h1>
+            <p>Name: {{ selectedSong.name }}</p>
+            <p>Authors: {{ selectedSong.artists.join(', ') }}</p>
+            <p>Possible Spotify matches:</p>
+            <a :href="`https://open.spotify.com/search/${selectedSong.name} ${selectedSong.artists.join(' ')}/tracks`">{{ selectedSong.name }}</a>
+        </div>
+    </div>
+
+    <!-- List with song names -->
+    <ul id="song-list">
+    </ul>
+
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+        let app = Vue.createApp({
+            data: function () {
+                return {
+                    songs: [
+                        { id: 1, name: '10000 reasons', artists: ['matt redmann', 'jonas myrin'] },
+                        { id: 2, name: 'agnus dei', artists: ['michael w. smith'] },
+                        { id: 3, name: 'song 3', artists: ['artist 5', 'artist 6'] },
+                        { id: 4, name: 'song 4', artists: ['artist 7', 'artist 8'] },
+                        { id: 5, name: 'song 5', artists: ['artist 9', 'artist 10'] },
+                    ],
+                    selectedSongID: 1, 
+                }
+            },
+            computed: {
+                selectedSong: function () {
+                    return this.songs.find(song => song.id === this.selectedSongID)
+                }
+            }
+
+        })
+        app.mount('#app')
+    </script>
+    <!-- Generate list with js -->
+
+    <!-- <script>
+        // Get songs from the backend
+        const songs = [
+            { id: 1, name: 'song 1', artists: ['artist 1', 'artist 2'] },
+            { id: 2, name: 'song 2', artists: ['artist 3', 'artist 4'] },
+            { id: 3, name: 'song 3', artists: ['artist 5', 'artist 6'] },
+            { id: 4, name: 'song 4', artists: ['artist 7', 'artist 8'] },
+            { id: 5, name: 'song 5', artists: ['artist 9', 'artist 10'] },
+        ];
+
+        // Get the song list
+        const songList = document.getElementById('song-list');
+
+        // Loop through the songs and add them to the list
+        songs.forEach(song => {
+            // Create a new list item
+            const newSong = document.createElement('li');
+            // anchor tag to song details
+            const songDetails = document.createElement('a');
+            songDetails.href = `songs/${song.id}`;
+            songDetails.textContent = song.name;
+            newSong.appendChild(songDetails);
+            //
+            //
+            //
+
+            // Add the new list item to the song list
+            songList.appendChild(newSong);
+        });
+
+    </script> -->
+
+
+</body>
+
+</html>
