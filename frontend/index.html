@@ -7,8 +7,9 @@
     <title>Generate Spotify Playlist</title>
 </head>
 
-<body>
-    <div id="app">
+<body id="app">
+
+    <header>
         <p v-if="currentUser">Welcome {{currentUser.full_name}}</p>
 
         <div v-if="!currentUser">
@@ -19,27 +20,41 @@
                 <button type="submit" v-on:click.prevent="login()">Login</button>
             </form>
         </div>
+    </header>
+    <main>
+        <h1>Generate Spotify Playlist</h1>
+        <p>Generate a Spotify playlist based on the songs you have in your library.</p>
+        <p>Click on a song to see the details and find matches on Spotify.</p>
 
+        <div class="flex-container" style="display: flex; flex-direction: row;">
+            <!-- left column with songs -->
+            <div class="left-column" style="display: flex; flex-direction: column;">
+                <!-- Add your left column content here -->
+                <h1>Songs</h1>
+                <div style="overflow-y: scroll; max-height: 50vh" id="song-list">
+                    <ul v-for="song in songs" :key="song.id">
+                        <a href="#" @click="selectedSongID = song.id">{{song.id}} {{ song.name }}</a>
+                    </ul>
+                </div>
+            </div>
 
-        <!-- Display the songs -->
-        <div>
-            <h1>Songs</h1>
-            <ul v-for="song in songs" :key="song.id" id="song-list">
-                <a href="#" @click="selectedSongID = song.id">{{ song.name }}</a>
-            </ul>
+            <!-- right column with song details -->
+            <div class="right-column">
+                <!-- Add your right column content here -->
+
+                <h1>Details for selected song</h1>
+                <p>Name: {{ selectedSong.name }}</p>
+                <p>Artists: {{ selectedSongArtistsFullNames.join(", ") }}</p>
+                <a
+                    :href="`https://open.spotify.com/search/${selectedSong.name} ${selectedSong.artists.join(' ')}/tracks`">Spotify
+                    matches</a>
+
+            </div>
         </div>
-        <div>
-            <h1>Details for selected song</h1>
-            <p>Name: {{ selectedSong.name }}</p>
-            <p>Authors: {{ selectedSong.artists.join(', ') }}</p>
-            <a :href="`https://open.spotify.com/search/${selectedSong.name} ${selectedSong.artists.join(' ')}/tracks`">Spotify
-                matches</a>
-        </div>
-    </div>
+    </main>
+    <footer>
 
-    <!-- List with song names -->
-    <ul id="song-list">
-    </ul>
+    </footer>
 
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
@@ -47,39 +62,40 @@
         const API_ROOT = 'http://127.0.0.1:8000/';
         const CURRENT_USER_URL = `${API_ROOT}users/me`;
         const SONGS_URL = `${API_ROOT}songs`;
-        getCurrentUser = async function () {
+
+        getEndpoint = async function (url) {
             let access_token = localStorage.getItem('access_token');
             if (!access_token) {
                 return null;
             }
-            let url = CURRENT_USER_URL;
             let options = {
                 method: 'GET',
                 headers: {
                     Authorization: `Bearer ${access_token}`
                 }
             };
-            return await fetch(url, options)
-                .then(res => res.json())
+            let data = handleRequest(url, options);
+            return data;
+        }
+
+        handleRequest = function (url, options) {
+            return fetch(url, options)
+                .then(res => {
+                    if (res.status == 401) {
+                        console.log("error: " + res.status);
+                        localStorage.removeItem('access_token');
+                        return null;
+                    } else if (res.status != 200) {
+                        console.log("error: " + res.status);
+                        return null;
+                    }
+                    return res.json();
+                })
                 .catch(err => console.error('error:' + err));
         }
 
-        getSongs = async function () {
-            let access_token = localStorage.getItem('access_token');
-            if (!access_token) {
-                return null;
-            }
-            let url = SONGS_URL;
-            let options = {
-                method: 'GET',
-                headers: {
-                    Authorization: `Bearer ${access_token}`
-                }
-            };
-            return await fetch(url, options)
-                .then(res => res.json())
-                .catch(err => console.error('error:' + err));
-        }
+        const getCurrentUser = getEndpoint.bind(null, CURRENT_USER_URL);
+        const getSongs = getEndpoint.bind(null, SONGS_URL);
 
         let app = Vue.createApp({
             data: function () {
@@ -91,11 +107,21 @@
                     userAuthenticated: false,
                     currentUser: null,
                     songs: [
-                        { id: 1, name: '10000 reasons', artists: ['matt redmann', 'jonas myrin'] },
-                        { id: 2, name: 'agnus dei', artists: ['michael w. smith'] },
-                        { id: 3, name: 'song 3', artists: ['artist 5', 'artist 6'] },
-                        { id: 4, name: 'song 4', artists: ['artist 7', 'artist 8'] },
-                        { id: 5, name: 'song 5', artists: ['artist 9', 'artist 10'] },
+                        {
+                            id: 1,
+                            name: '10000 reasons',
+                            artists: [
+                                { id: 1, first_name: 'matt', last_name: 'redmann' },
+                                { id: 2, first_name: 'jonas', last_name: 'myrin' },
+                            ]
+                        },
+                        {
+                            id: 2,
+                            name: 'agnus dei',
+                            artists: [
+                                { id: 3, first_name: 'michael', last_name: 'smith' },
+                            ]
+                        },
                     ],
                     selectedSongID: 1,
                 }
@@ -151,6 +177,9 @@
                 selectedSong: function () {
                     return this.songs.find(song => song.id === this.selectedSongID)
                 },
+                selectedSongArtistsFullNames: function () {
+                    return this.selectedSong.artists.map(el => `${el.first_name} ${el.last_name}`)
+                }
             },
             mounted: async function () {
                 this.currentUser = await getCurrentUser();
