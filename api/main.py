@@ -4,6 +4,7 @@ from typing import Annotated
 
 import jwt
 from fastapi import FastAPI, Depends, HTTPException, status
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from jwt.exceptions import InvalidTokenError
 from passlib.context import CryptContext
@@ -59,6 +60,20 @@ pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
 app = FastAPI()
+
+origins = [
+    "http://127.0.0.1:5500",
+    "http://localhost:5500",
+    "http://localhost:5500/frontend",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 def verify_password(plain_password, hashed_password):
@@ -199,7 +214,7 @@ def read_artist(
     return artist
 
 
-@app.get("/songs/")
+@app.get("/songs")
 def read_songs(
     search: str = None, current_user: Annotated[User, Depends(get_current_active_user)] = None
     ) -> list[SongModel]:
@@ -208,7 +223,7 @@ def read_songs(
     return get_all_songs()
 
 
-@app.get("/artists/")
+@app.get("/artists")
 def read_artists(
     search: str = None, current_user: Annotated[User, Depends(get_current_active_user)] = None
     ) -> list[ArtistModel]:
