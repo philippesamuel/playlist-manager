@@ -9,6 +9,18 @@
 
 <body>
     <div id="app">
+        <p v-if="currentUser">Welcome {{currentUser.full_name}}</p>
+
+        <div v-if="!currentUser">
+            <h1>Login</h1>
+            <form id="login-form" name="login-form">
+                <input id="username" type="text" placeholder="Username" v-model="input.username">
+                <input id="password" type="password" placeholder="Password" v-model="input.password">
+                <button type="submit" v-on:click.prevent="login()">Login</button>
+            </form>
+        </div>
+
+
         <!-- Display the songs -->
         <div>
             <h1>Songs</h1>
@@ -20,8 +32,8 @@
             <h1>Details for selected song</h1>
             <p>Name: {{ selectedSong.name }}</p>
             <p>Authors: {{ selectedSong.artists.join(', ') }}</p>
-            <p>Possible Spotify matches:</p>
-            <a :href="`https://open.spotify.com/search/${selectedSong.name} ${selectedSong.artists.join(' ')}/tracks`">{{ selectedSong.name }}</a>
+            <a :href="`https://open.spotify.com/search/${selectedSong.name} ${selectedSong.artists.join(' ')}/tracks`">Spotify
+                matches</a>
         </div>
     </div>
 
@@ -32,9 +44,52 @@
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script>
+        const API_ROOT = 'http://127.0.0.1:8000/';
+        const CURRENT_USER_URL = `${API_ROOT}users/me`;
+        const SONGS_URL = `${API_ROOT}songs`;
+        getCurrentUser = async function () {
+            let access_token = localStorage.getItem('access_token');
+            if (!access_token) {
+                return null;
+            }
+            let url = CURRENT_USER_URL;
+            let options = {
+                method: 'GET',
+                headers: {
+                    Authorization: `Bearer ${access_token}`
+                }
+            };
+            return await fetch(url, options)
+                .then(res => res.json())
+                .catch(err => console.error('error:' + err));
+        }
+
+        getSongs = async function () {
+            let access_token = localStorage.getItem('access_token');
+            if (!access_token) {
+                return null;
+            }
+            let url = SONGS_URL;
+            let options = {
+                method: 'GET',
+                headers: {
+                    Authorization: `Bearer ${access_token}`
+                }
+            };
+            return await fetch(url, options)
+                .then(res => res.json())
+                .catch(err => console.error('error:' + err));
+        }
+
         let app = Vue.createApp({
             data: function () {
                 return {
+                    input: {
+                        username: "",
+                        password: ""
+                    },
+                    userAuthenticated: false,
+                    currentUser: null,
                     songs: [
                         { id: 1, name: '10000 reasons', artists: ['matt redmann', 'jonas myrin'] },
                         { id: 2, name: 'agnus dei', artists: ['michael w. smith'] },
@@ -42,53 +97,68 @@
                         { id: 4, name: 'song 4', artists: ['artist 7', 'artist 8'] },
                         { id: 5, name: 'song 5', artists: ['artist 9', 'artist 10'] },
                     ],
-                    selectedSongID: 1, 
+                    selectedSongID: 1,
                 }
+            },
+            methods: {
+                login: async function () {
+                    // Send the username and password to the backend
+                    //make sure username OR password are not empty
+                    if (this.input.username == "" || this.input.password == "") {
+                        console.log("Username or password cannot be empty")
+                    } else {
+                        try {
+                            let access_token = await this.getAccessToken();
+                            if (access_token) {
+                                localStorage.setItem('access_token', access_token);
+                                this.currentUser = await getCurrentUser();
+                            }
+                        } catch (error) {
+                            console.log("error:" + error);
+                        }
+                    }
+
+                },
+                getAccessToken: async function () {
+                    // Get the access token from the backend
+                    // Create a new FormData object with the input values
+                    let formData = new FormData();
+                    formData.append('username', this.input.username);
+                    formData.append('password', this.input.password);
+                    let url = 'http://127.0.0.1:8000/token';
+
+                    let options = {
+                        method: 'POST',
+                    };
+
+                    options.body = formData;
+
+                    try {
+                        let res = await fetch(url, options);
+                        if (res.status == 200) {
+                            let json = await res.json();
+                            return json.access_token;
+                        } else {
+                            console.log("error: " + res.status);
+                        }
+                    } catch (error) {
+                        console.log("error:" + error);
+                    }
+                },
+
             },
             computed: {
                 selectedSong: function () {
                     return this.songs.find(song => song.id === this.selectedSongID)
-                }
+                },
+            },
+            mounted: async function () {
+                this.currentUser = await getCurrentUser();
+                this.songs = await getSongs();
             }
-
         })
         app.mount('#app')
     </script>
-    <!-- Generate list with js -->
-
-    <!-- <script>
-        // Get songs from the backend
-        const songs = [
-            { id: 1, name: 'song 1', artists: ['artist 1', 'artist 2'] },
-            { id: 2, name: 'song 2', artists: ['artist 3', 'artist 4'] },
-            { id: 3, name: 'song 3', artists: ['artist 5', 'artist 6'] },
-            { id: 4, name: 'song 4', artists: ['artist 7', 'artist 8'] },
-            { id: 5, name: 'song 5', artists: ['artist 9', 'artist 10'] },
-        ];
-
-        // Get the song list
-        const songList = document.getElementById('song-list');
-
-        // Loop through the songs and add them to the list
-        songs.forEach(song => {
-            // Create a new list item
-            const newSong = document.createElement('li');
-            // anchor tag to song details
-            const songDetails = document.createElement('a');
-            songDetails.href = `songs/${song.id}`;
-            songDetails.textContent = song.name;
-            newSong.appendChild(songDetails);
-            //
-            //
-            //
-
-            // Add the new list item to the song list
-            songList.appendChild(newSong);
-        });
-
-    </script> -->
-
-
 </body>
 
 </html>
