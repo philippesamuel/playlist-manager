@@ -1,13 +1,18 @@
 from contextlib import contextmanager
-from typing import ClassVar
 
 import duckdb
 from loguru import logger
+from pydantic import computed_field
 from sqlalchemy import create_engine, select
 from sqlalchemy.ext.hybrid import hybrid_property
 from sqlalchemy.orm import selectinload
 from sqlmodel import Field, Relationship, Session, SQLModel, create_engine, text
 
+
+def get_session():
+    with Session(engine) as session:
+        yield session
+    
 
 class ArtistSongLink(SQLModel, table=True):
     """Link table between Artist and Song"""
@@ -18,8 +23,34 @@ class ArtistSongLink(SQLModel, table=True):
     song_id: int | None = Field(default=None, foreign_key="song.id", primary_key=True)
 
 
-def _full_name(self) -> str:
-    return f"{self.first_name} {self.last_name}"
+class ArtistBase(SQLModel):
+    first_name: str
+    last_name: str
+
+    songs: list["Song"] = Relationship(
+        back_populates="artists", link_model=ArtistSongLink, sa_relationship_kwargs={"lazy": "joined"}
+    )
+
+    @computed_field
+    @hybrid_property
+    def full_name(self) -> str:
+        return self.first_name + " " + self.last_name
+
+
+class Artist(ArtistBase, table=True):
+    id: int | None = Field(default=None, primary_key=True)
+
+
+class ArtistCreate(ArtistBase): ...
+
+
+class ArtistPublic(ArtistBase):
+    id: int
+
+
+class ArtistUpdate(SQLModel):
+    first_name: str | None = None
+    last_name: str | None = None
 
 
 class Artist(SQLModel, table=True):
@@ -28,11 +59,15 @@ class Artist(SQLModel, table=True):
     id: int | None = Field(default=None, primary_key=True)
     first_name: str
     last_name: str = Field(index=True)
-    full_name: ClassVar[str] = hybrid_property(_full_name)
 
     songs: list["Song"] = Relationship(
-        back_populates="artists", link_model=ArtistSongLink
+        back_populates="artists", link_model=ArtistSongLink, sa_relationship_kwargs={"lazy": "joined"}
     )
+
+    @computed_field
+    @hybrid_property
+    def full_name(self) -> str:
+        return self.first_name + " " + self.last_name
 
 
 class Song(SQLModel, table=True):
@@ -42,7 +77,7 @@ class Song(SQLModel, table=True):
     name: str = Field(index=True)
     ccli_number: int | None = Field(default=None)
     artists: list["Artist"] = Relationship(
-        back_populates="songs", link_model=ArtistSongLink
+        back_populates="songs", link_model=ArtistSongLink, sa_relationship_kwargs={"lazy": "joined"}
     )
 
 
@@ -139,11 +174,10 @@ def insert_spotify_track_by_song_id(song_id: int, spotify_id: str) -> None:
         session.commit()
 
 
-def get_song_by_id(song_id: int) -> Song | None:
+def get_song_by_id(song_id: int, session: Session) -> Song | None:
     """Get a song from the database by ID"""
-    with Session(engine) as session:
-        song = session.get(Song, song_id, options=(selectinload(Song.artists),))
-        return song
+    song = session.get(Song, song_id, options=(selectinload(Song.artists),))
+    return song
 
 
 def get_song(song_name: str) -> Song | None:

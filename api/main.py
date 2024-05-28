@@ -9,9 +9,11 @@ from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from jwt.exceptions import InvalidTokenError
 from passlib.context import CryptContext
 from pydantic import BaseModel
+from sqlmodel import Session
 from db.db import (
     Song,
     Artist,
+    get_session,
     get_song_by_id,
     get_artist_by_id,
     get_all_songs,
@@ -196,9 +198,10 @@ def read_root():
 
 @app.get("/songs/{song_id}", response_model=SongModel)
 def read_song(
-    song_id: int, current_user: Annotated[User, Depends(get_current_active_user)]
+    song_id: int, current_user: Annotated[User, Depends(get_current_active_user)],
+    session: Session = Depends(get_session)
     ) -> SongModel:
-    song = get_song_by_id(song_id)
+    song = get_song_by_id(song_id, session)
     if song is None:
         raise HTTPException(status_code=404, detail="Song not found")
     return song
