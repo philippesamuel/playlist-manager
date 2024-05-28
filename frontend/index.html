@@ -46,7 +46,7 @@
                 <p>Name: {{ selectedSong.name }}</p>
                 <p>Artists: {{ selectedSongArtistsFullNames.join(", ") }}</p>
                 <a
-                    :href="`https://open.spotify.com/search/${selectedSong.name} ${selectedSong.artists.join(' ')}/tracks`">Spotify
+                    :href="`https://open.spotify.com/search/${selectedSong.name} ${selectedSongArtistsFullNames.join(', ')}/tracks`">Spotify
                     matches</a>
 
             </div>
