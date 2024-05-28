@@ -11,8 +11,8 @@ from passlib.context import CryptContext
 from pydantic import BaseModel
 from sqlmodel import Session
 from db.db import (
-    Song,
-    Artist,
+    ArtistPublic,
+    SongPublic,
     get_session,
     get_song_by_id,
     get_artist_by_id,
@@ -165,71 +165,45 @@ async def read_users_me(
     return current_user
 
 
-class SongArtistModel(BaseModel):
-    id: int
-    first_name: str
-    last_name: str
-
-
-class SongModel(BaseModel):
-    id: int
-    name: str
-    ccli_number: int | None
-    artists: list[SongArtistModel]
-
-
-class ArtistSongModel(BaseModel):
-    id: int
-    name: str
-    ccli_number: int | None
-
-
-class ArtistModel(BaseModel):
-    id: int
-    first_name: str
-    last_name: str
-    songs: list[ArtistSongModel]
-
-
 @app.get("/")
 def read_root():
     return {"Hello": "World"}
 
 
-@app.get("/songs/{song_id}", response_model=SongModel)
+@app.get("/songs/{song_id}", response_model=SongPublic)
 def read_song(
     song_id: int, current_user: Annotated[User, Depends(get_current_active_user)],
     session: Session = Depends(get_session)
-    ) -> SongModel:
+    ):
     song = get_song_by_id(song_id, session)
     if song is None:
         raise HTTPException(status_code=404, detail="Song not found")
     return song
 
 
-@app.get("/artists/{artist_id}", response_model=ArtistModel)
+@app.get("/artists/{artist_id}", response_model=ArtistPublic)
 def read_artist(
     artist_id: int, current_user: Annotated[User, Depends(get_current_active_user)]
-    ) -> ArtistModel:
+    ):
     artist = get_artist_by_id(artist_id)
     if artist is None:
         raise HTTPException(status_code=404, detail="Artist not found")
     return artist
 
 
-@app.get("/songs")
+@app.get("/songs", response_model=list[SongPublic])
 def read_songs(
     search: str = None, current_user: Annotated[User, Depends(get_current_active_user)] = None
-    ) -> list[SongModel]:
+    ):
     if search:
         return search_songs(search)
     return get_all_songs()
 
 
-@app.get("/artists")
+@app.get("/artists", response_model=list[ArtistPublic])
 def read_artists(
     search: str = None, current_user: Annotated[User, Depends(get_current_active_user)] = None
-    ) -> list[ArtistModel]:
+    ):
     if search:
         return search_artists(search)
     return get_all_artists()

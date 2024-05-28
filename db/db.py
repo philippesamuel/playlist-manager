@@ -1,6 +1,5 @@
 from contextlib import contextmanager
 
-import duckdb
 from loguru import logger
 from pydantic import computed_field
 from sqlalchemy import create_engine, select
@@ -27,6 +26,10 @@ class ArtistBase(SQLModel):
     first_name: str
     last_name: str
 
+
+class Artist(ArtistBase, table=True):
+    id: int | None = Field(default=None, primary_key=True)
+
     songs: list["Song"] = Relationship(
         back_populates="artists", link_model=ArtistSongLink, sa_relationship_kwargs={"lazy": "joined"}
     )
@@ -37,15 +40,13 @@ class ArtistBase(SQLModel):
         return self.first_name + " " + self.last_name
 
 
-class Artist(ArtistBase, table=True):
-    id: int | None = Field(default=None, primary_key=True)
-
-
-class ArtistCreate(ArtistBase): ...
+class ArtistCreate(ArtistBase):
+    pass
 
 
 class ArtistPublic(ArtistBase):
     id: int
+    songs: list["Song"]
 
 
 class ArtistUpdate(SQLModel):
@@ -53,32 +54,32 @@ class ArtistUpdate(SQLModel):
     last_name: str | None = None
 
 
-class Artist(SQLModel, table=True):
-    """Artist model"""
+class SongBase(SQLModel):
+    name: str
+    ccli_number: int | None = None
 
+
+class Song(SongBase, table=True):
     id: int | None = Field(default=None, primary_key=True)
-    first_name: str
-    last_name: str = Field(index=True)
 
-    songs: list["Song"] = Relationship(
-        back_populates="artists", link_model=ArtistSongLink, sa_relationship_kwargs={"lazy": "joined"}
-    )
-
-    @computed_field
-    @hybrid_property
-    def full_name(self) -> str:
-        return self.first_name + " " + self.last_name
-
-
-class Song(SQLModel, table=True):
-    """Song model"""
-
-    id: int | None = Field(default=None, primary_key=True)
-    name: str = Field(index=True)
-    ccli_number: int | None = Field(default=None)
     artists: list["Artist"] = Relationship(
         back_populates="songs", link_model=ArtistSongLink, sa_relationship_kwargs={"lazy": "joined"}
     )
+
+
+class SongCreate(SongBase):
+    artists: list[ArtistCreate] | None = None
+
+
+class SongPublic(SongBase):
+    id: int
+    artists: list[ArtistPublic]
+
+
+class SongUpdate(SQLModel):
+    name: str | None = None
+    ccli_number: int | None = None
+    artists: list[ArtistCreate] | None = None
 
 
 class SpotifyTrack(SQLModel, table=True):
@@ -251,15 +252,6 @@ def get_all_artists() -> list[Artist]:
         statement = select(Artist).options(selectinload(Artist.songs))
         result = session.exec(statement)
         return [a[0] for a in result.all()]
-
-
-@contextmanager
-def get_db(read_only: bool = False):
-    con = duckdb.connect(database="db/duck.db", read_only=read_only)
-    try:
-        yield con
-    finally:
-        con.close()
 
 
 def main() -> None:
