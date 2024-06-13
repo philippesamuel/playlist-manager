@@ -1,3 +1,0 @@
-ipython
-jupysql
-magic_duckdb
