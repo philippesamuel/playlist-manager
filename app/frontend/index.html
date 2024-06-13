@@ -59,6 +59,12 @@
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script>
+        import { SpotifyWebApi } from '@spotify/web-api-ts-sdk';
+
+        const sdk = SpotifyApi.withUserAuthorization("client-id", "https://localhost:3000", ["scope1", "scope2"]);
+
+    </script>
+    <script>
         const API_ROOT = 'http://127.0.0.1:8000/';
         const CURRENT_USER_URL = `${API_ROOT}users/me`;
         const SONGS_URL = `${API_ROOT}songs`;

@@ -1,7 +1,7 @@
 from loguru import logger
 
 from churchtools import get_browser, login_and_yield_song_data
-from db import insert_song, update_song
+from app.database import insert_song, update_song
 
 
 def main() -> None:

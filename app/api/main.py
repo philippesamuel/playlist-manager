@@ -10,7 +10,7 @@ from jwt.exceptions import InvalidTokenError
 from passlib.context import CryptContext
 from pydantic import BaseModel
 from sqlmodel import Session
-from db.db import (
+from database.db import (
     ArtistPublic,
     SongPublic,
     get_session,
