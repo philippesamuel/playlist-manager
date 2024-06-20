@@ -3,7 +3,6 @@ from typing import Iterator
 
 from loguru import logger
 from selenium import webdriver
-from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support.ui import WebDriverWait
@@ -11,9 +10,9 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.common.exceptions import NoSuchElementException
 
-from config import settings
-
-URL = "https://mosaikberlin.church.tools/?q=churchservice#SongView/"
+from scrapper.browser import get_browser
+from .auth import login
+from .navigate import get_next_page
 
 DELIMITERS = [" | ", ", "]
 DELIMITERS_STR = "|".join(map(re.escape, DELIMITERS))
@@ -27,12 +26,9 @@ def main() -> None:
     input("Press Enter to close browser")
 
 
-def get_browser() -> webdriver.Chrome:
-    """Get a Chrome browser instance."""
-    return webdriver.Chrome()
-
-
-def login_and_yield_song_data(browser: webdriver.Chrome) -> Iterator[tuple[str, list[str], int | None]]:
+def login_and_yield_song_data(
+    browser: webdriver.Chrome,
+) -> Iterator[tuple[str, list[str], int | None]]:
     """Log into the ChurchTools website and yield song data."""
 
     login(browser)
@@ -45,30 +41,6 @@ def login_and_yield_song_data(browser: webdriver.Chrome) -> Iterator[tuple[str, 
         for node in get_song_data_nodes(browser):
             song_name, song_artists, ccli_number = get_song_data(browser, node)
             yield song_name, song_artists, ccli_number
-
-
-def get_next_page(browser: webdriver.Chrome) -> WebElement | None:
-    wait = WebDriverWait(browser, 2)
-    try:
-        return wait.until(EC.presence_of_element_located((By.ID, "offsetPlus")))
-    except TimeoutException:
-        logger.info("No more pages to scrape")
-        return None
-
-
-def login(browser: webdriver.Chrome, url: str = URL) -> None:
-    """Log into the ChurchTools website using the provided browser instance."""
-    browser.maximize_window()
-    browser.get(url)
-
-    username_input = browser.find_element(By.ID, "username")
-    pw_input = browser.find_element(By.ID, "password")
-
-    username_input.send_keys(settings.churchtools_user.get_secret_value())
-    pw_input.send_keys(settings.churchtools_pw.get_secret_value())
-
-    login_button = browser.find_element(By.CSS_SELECTOR, "button[type='submit']")
-    login_button.click()
 
 
 def get_song_data_nodes(browser: webdriver.Chrome) -> Iterator[WebElement]:
@@ -84,25 +56,26 @@ def get_song_data_nodes(browser: webdriver.Chrome) -> Iterator[WebElement]:
         yield node
 
 
-def get_song_data(browser: webdriver.Chrome, node: WebElement) -> tuple[str, list[str], int | None]:
+def get_song_data(
+    browser: webdriver.Chrome, node: WebElement
+) -> tuple[str, list[str], int | None]:
     """Get the song data from the provided node."""
     song_anchor = node.find_elements(By.CSS_SELECTOR, "td>a")[1]
-    
+
     ActionChains(browser).move_to_element(song_anchor).click().perform()
     song_name = song_anchor.text
     ARTISTS_CSS_SELECTOR = ".entrydetail > div:nth-child(1) > small:nth-child(4)"
     CCLI_ID = "songselect-link"
     wait = WebDriverWait(browser, 2)
 
-    song_artists_node = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, ARTISTS_CSS_SELECTOR)))
+    song_artists_node = wait.until(
+        EC.presence_of_element_located((By.CSS_SELECTOR, ARTISTS_CSS_SELECTOR))
+    )
     ActionChains(browser).move_to_element(song_artists_node).perform()
     song_artists_raw_string = song_artists_node.text
     song_artists_raw_string = (
-        song_artists_raw_string
-        .replace("Author", "")
-        .replace(":", "")
-        .strip()
-        )
+        song_artists_raw_string.replace("Author", "").replace(":", "").strip()
+    )
     song_artists = DELIMITERS_PATTERN.split(song_artists_raw_string)
     try:
         ccli_number_raw = browser.find_element(By.ID, CCLI_ID).text
@@ -112,9 +85,9 @@ def get_song_data(browser: webdriver.Chrome, node: WebElement) -> tuple[str, lis
         ccli_number = None
     except Exception as e:
         logger.error(f"Error while processing ccli_number: {e}")
-        logger.info(f"{ccli_number_raw}=")        
+        logger.info(f"{ccli_number_raw}=")
         ccli_number = None
-    
+
     song_anchor.click()
     return song_name, song_artists, ccli_number
 

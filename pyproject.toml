@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "playlist-manager"
+version = "0.1.0"
+description = "Create and modify Spotify playlists. More specifically, playlist for the worship set list at our church."
+authors = ["Philippe Santos da Costa <philippesamuel.costa@hotmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "playlist_manager"}]
+
+
+[tool.poetry.scripts]
+scrape_songs = "scrapper.tasks.scrape_songs:main"
+scrape_playlists = "scrapper.tasks.scrape_playlists:main"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+
+[tool.poetry.group.scrapper.dependencies]
+selenium = "^4.21.0"
+loguru = "^0.7.2"
+pydantic-settings = "^2.3.3"
+
+
+[tool.poetry.group.scrape-dev.dependencies]
+beautifulsoup4 = "^4.12.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
