@@ -4,17 +4,18 @@ from typing import Annotated
 
 from fastapi import FastAPI, Depends, HTTPException, status
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
-from passlib.context import CryptContext
+from fastapi.security import OAuth2PasswordRequestForm
 from sqlmodel import Session
 
 from ..crud.artist import get_all_artists, get_artist_by_id, search_artists
 from ..crud.song import get_all_songs, get_song_by_id, search_songs
 from ..database.db import get_session
-from ..models.auth import Token
-from ..models.user import User
-from ..models.song import SongPublic
-from ..models.artist import ArtistPublic
+from ..models import (
+    Token,
+    User,
+    SongPublic,
+    ArtistPublic,
+)
 from .dependencies import (
     authenticate_user,
     create_access_token,
@@ -22,14 +23,7 @@ from .dependencies import (
 )
 from .dependencies import fake_users_db
 
-
-SECRET_KEY = os.environ.get("SECRET_KEY")
-ALGORITHM = os.environ.get("ALGORITHM")
 ACCESS_TOKEN_EXPIRE_MINUTES = int(os.environ.get("ACCESS_TOKEN_EXPIRE_MINUTES"))
-
-pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
-
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
 app = FastAPI()
 
@@ -118,3 +112,7 @@ def read_artists(
     if search:
         return search_artists(search)
     return get_all_artists()
+
+
+if __name__ == "__main__":
+    main()

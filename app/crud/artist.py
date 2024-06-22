@@ -4,7 +4,7 @@ from sqlalchemy.orm import selectinload
 from sqlmodel import Session, text
 
 from ..database.db import engine
-from ..models.artist import Artist
+from ..models import Artist
 
 
 def get_artist(

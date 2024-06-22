@@ -4,7 +4,7 @@ from sqlalchemy.orm import selectinload
 from sqlmodel import Session, text
 
 from ..database.db import engine
-from ..models.song import Song
+from ..models import Song
 from .artist import create_artist_if_not_exists
 
 

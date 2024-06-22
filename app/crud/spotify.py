@@ -1,7 +1,7 @@
 from sqlmodel import Session
 
 from ..database.db import engine
-from ..models.spotify import SpotifyTrack
+from ..models import SpotifyTrack
 
 
 def insert_spotify_track_by_song_id(song_id: int, spotify_id: str) -> None:

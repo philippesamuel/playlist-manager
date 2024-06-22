@@ -1,13 +1,21 @@
+import os
 from typing import Annotated
 from datetime import datetime, timedelta, timezone
 
 from fastapi import Depends, HTTPException, status
+from fastapi.security import OAuth2PasswordBearer
+import jwt
 from jwt.exceptions import InvalidTokenError
+from passlib.context import CryptContext
 
-from .main import oauth2_scheme, pwd_context
-from ..models.auth import TokenData
-from ..models.user import User, UserInDB
+from ..models import (
+    TokenData,
+    User,
+    UserInDB,
+)
 
+SECRET_KEY = os.environ.get("SECRET_KEY")
+ALGORITHM = os.environ.get("ALGORITHM")
 
 fake_users_db = {
     "johndoe": {
@@ -18,6 +26,9 @@ fake_users_db = {
         "disabled": False,
     }
 }
+
+pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
 
 def verify_password(plain_password, hashed_password):
