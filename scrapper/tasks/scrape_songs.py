@@ -1,7 +1,7 @@
 from loguru import logger
 
 from churchtools import login_and_yield_song_data
-from app.database import insert_song, update_song
+from app.crud.song import insert_song, update_song
 from scrapper.browser import get_browser
 
 
