@@ -1,31 +1,13 @@
-import os
-from datetime import timedelta
-from typing import Annotated
-
-from fastapi import FastAPI, Depends, HTTPException, status
+from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.security import OAuth2PasswordRequestForm
-from sqlmodel import Session
 
-from ..crud.artist import get_all_artists, get_artist_by_id, search_artists
-from ..crud.song import get_all_songs, get_song_by_id, search_songs
-from ..database.db import get_session
-from ..models import (
-    Token,
-    User,
-    SongPublic,
-    ArtistPublic,
-)
-from .dependencies import (
-    authenticate_user,
-    create_access_token,
-    get_current_active_user,
-)
-from .dependencies import fake_users_db
-
-ACCESS_TOKEN_EXPIRE_MINUTES = int(os.environ.get("ACCESS_TOKEN_EXPIRE_MINUTES"))
+from .routes import auth, user, song, artist
 
 app = FastAPI()
+app.include_router(auth.router)
+app.include_router(user.router)
+app.include_router(song.router)
+app.include_router(artist.router)
 
 origins = [
     "http://127.0.0.1:5500",
@@ -42,76 +24,15 @@ app.add_middleware(
 )
 
 
-@app.post("/token")
-async def login_for_access_token(
-    form_data: Annotated[OAuth2PasswordRequestForm, Depends()]
-) -> Token:
-    user = authenticate_user(fake_users_db, form_data.username, form_data.password)
-    if not user:
-        raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Incorrect username or password",
-            headers={"WWW-Authenticate": "Bearer"},
-        )
-    access_token_expires = timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
-    access_token = create_access_token(
-        data={"sub": user.username}, expires_delta=access_token_expires
-    )
-    return Token(access_token=access_token, token_type="bearer")
-
-
-@app.get("/users/me", response_model=User)
-async def read_users_me(
-    current_user: Annotated[User, Depends(get_current_active_user)]
-):
-    return current_user
-
-
 @app.get("/")
 def read_root():
     return {"Hello": "World"}
 
 
-@app.get("/songs/{song_id}", response_model=SongPublic)
-def read_song(
-    song_id: int,
-    current_user: Annotated[User, Depends(get_current_active_user)],
-    session: Session = Depends(get_session),
-):
-    song = get_song_by_id(song_id, session)
-    if song is None:
-        raise HTTPException(status_code=404, detail="Song not found")
-    return song
+def main():
+    import uvicorn
 
-
-@app.get("/artists/{artist_id}", response_model=ArtistPublic)
-def read_artist(
-    artist_id: int, current_user: Annotated[User, Depends(get_current_active_user)]
-):
-    artist = get_artist_by_id(artist_id)
-    if artist is None:
-        raise HTTPException(status_code=404, detail="Artist not found")
-    return artist
-
-
-@app.get("/songs", response_model=list[SongPublic])
-def read_songs(
-    search: str = None,
-    current_user: Annotated[User, Depends(get_current_active_user)] = None,
-):
-    if search:
-        return search_songs(search)
-    return get_all_songs()
-
-
-@app.get("/artists", response_model=list[ArtistPublic])
-def read_artists(
-    search: str = None,
-    current_user: Annotated[User, Depends(get_current_active_user)] = None,
-):
-    if search:
-        return search_artists(search)
-    return get_all_artists()
+    uvicorn.run(app, host="0.0.0.0", port=8000)
 
 
 if __name__ == "__main__":
